@@ -1,10 +1,8 @@
 import './Login.css';
-
+import { Auth } from '../types';
 import React, { useState } from 'react';
 import Web3 from 'web3';
 declare var window: any;
-
-import { Auth } from '../types';
 
 interface Props {
 	onLoggedIn: (auth: Auth) => void;
@@ -38,7 +36,6 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 		nonce: string;
 	}) => {
 		try {
-			console.log("publicAddress",publicAddress);
 			web3 = new Web3(window.ethereum);
 			const signature = await web3.eth.personal.sign(
 				`I am signing my one-time nonce: ${nonce}`,
