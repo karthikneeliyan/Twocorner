@@ -2,6 +2,7 @@ import './Login.css';
 import { Auth } from '../types';
 import React, { useState } from 'react';
 import Web3 from 'web3';
+import metamask from './metamask-fox.svg';
 declare var window: any;
 
 interface Props {
@@ -122,7 +123,10 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 			    Sign-in
 			</p>
 			<button className="login__button" onClick={handleClick}>
-				{loading ? 'Loading...' : 'Login with MetaMask'}
+				<div className="login__metamask">
+					<img src={metamask}  alt="Metamask" />
+					{loading ? 'Loading...' : 'Login with MetaMask'}
+				</div>
 			</button>
 			</div>
 		</div>

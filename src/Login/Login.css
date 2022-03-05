@@ -33,5 +33,10 @@
 
 .login__button:hover {
   opacity: 0.9;
-  background-color: #e28f12
+  /* background-color: #4595eb; */
+}
+.login__metamask {
+  display: flex;
+  align-items: center;
+  justify-content: middle;
 }
