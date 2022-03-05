@@ -1,14 +1,4 @@
-.Login-button {
-  color: white;
-  display: block;
-  font-size: 16px;
-  height: 60px;
-  margin: 10px auto;
-  width: 300px;
-}
-
-
-.Private-Spaces-Uniq {
+.login__heading {
   margin: 10px 0 0;
   font-family: Lato;
   font-size: 22px;
@@ -20,7 +10,7 @@
   color: #fff;
 }
 
-.Sign-in {
+.login__signin {
   font-family: Roboto;
   font-size: 16px;
   font-weight: bold;
@@ -31,27 +21,17 @@
   color: #fff;
 }
 
-.Rectangle-4 {
-
+.login__button {
   margin: 8px 0 0;
   padding: 10px 86px 11px;
+  font-size: 16px;
+  font-weight: bold;
   border-radius: 3px;
   box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.19);
   background-color: #fff;
 }
 
-.Login-button:hover {
+.login__button:hover {
   opacity: 0.9;
-}
-
-.Login-email {
-  background-color: darkgray;
-}
-
-.Login-fb {
-  background-color: rgb(72, 98, 163);
-}
-
-.Login-mm {
-  background-color: rgb(255, 125, 0);
+  background-color: #e28f12
 }

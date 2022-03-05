@@ -19,11 +19,7 @@ export const App = (): JSX.Element => {
 	useEffect(() => {
 		// Access token is stored in localstorage
 		const ls = window.localStorage.getItem(LS_KEY);
-		console.log("sfsdfdsfdfds");
-		console.log(ls)	
-		console.log("erro")
 		const auth = ls && JSON.parse(ls);
-		console.log("coming after parse")
 		setState({ auth });
 	}, []);
 

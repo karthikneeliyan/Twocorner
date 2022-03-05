@@ -20,7 +20,7 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 		publicAddress: string;
 		signature: string;
 	}) =>
-		fetch(`${process.env.REACT_APP_BACKEND_URL}/auth`, {
+		fetch(`${process.env.NODE_API_URL}/auth`, {
 			body: JSON.stringify({ publicAddress, signature }),
 			headers: {
 				'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 	};
 
 	const handleSignup = (publicAddress: string) =>
-		fetch(`${process.env.REACT_APP_BACKEND_URL}/users`, {
+		fetch(`${process.env.NODE_API_URL}/users`, {
 			body: JSON.stringify({ publicAddress }),
 			headers: {
 				'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 
 		// Look if user with current publicAddress is already present on backend
 		fetch(
-			`${process.env.REACT_APP_BACKEND_URL}/users?publicAddress=${publicAddress}`
+			`${process.env.NODE_API_URL}/users?publicAddress=${publicAddress}`
 		)
 			.then((response) => response.json())
 			// If yes, retrieve it. If no, create it.
@@ -113,15 +113,15 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 	};
 
 	return (
-		<div>
-			<p className='Private-Spaces-Uniq'>
+		<div className="login">
+			<p className='login__heading'>
 			    Private Spaces, Unique Conversations
 			</p>
 			<div>
-			<p className='Sign-in'>
+			<p className='login__signin'>
 			    Sign-in
 			</p>
-			<button className="Rectangle-4" onClick={handleClick}>
+			<button className="login__button" onClick={handleClick}>
 				{loading ? 'Loading...' : 'Login with MetaMask'}
 			</button>
 			</div>

@@ -40,7 +40,7 @@ export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
 			payload: { id },
 		} = jwtDecode<JwtDecoded>(accessToken);
 
-		fetch(`${process.env.REACT_APP_BACKEND_URL}/users/${id}`, {
+		fetch(`${process.env.NODE_API_URL}/users/${id}`, {
 			headers: {
 				Authorization: `Bearer ${accessToken}`,
 			},
@@ -69,7 +69,7 @@ export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
 			return;
 		}
 
-		fetch(`${process.env.REACT_APP_BACKEND_URL}/users/${user.id}`, {
+		fetch(`${process.env.NODE_API_URL}/users/${user.id}`, {
 			body: JSON.stringify({ username }),
 			headers: {
 				Authorization: `Bearer ${accessToken}`,
