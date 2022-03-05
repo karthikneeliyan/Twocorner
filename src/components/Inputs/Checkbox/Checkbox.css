@@ -1,0 +1,20 @@
+.form-checkbox{
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.text-muted{
+    color: #6c757d;  
+  
+}
+.form-checkbox a{
+    text-decoration: inherit;    
+}
+.form-checkbox-input{
+    float: left;
+    margin-right: 1rem;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.25rem;  
+    border: 1px solid rgba(0,0,0,.25);
+}

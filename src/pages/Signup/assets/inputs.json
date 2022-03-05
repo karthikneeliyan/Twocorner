@@ -1,0 +1,22 @@
+[
+  {
+    "name": "fullName",
+    "label": "Full Name",
+    "type": "text"
+  },
+  {
+    "name": "dob",
+    "label": "Dob",
+    "type": "text"
+  },
+  {
+    "name": "mobile",
+    "label": "Mobile Number",
+    "type": "mobile"
+  },
+  {
+    "name": "terms",
+    "label": "Mobile Number",
+    "type": "checkbox"
+  }
+]

@@ -1,0 +1,22 @@
+.dashboard{
+    height: 100vh;
+    overflow: hidden;
+    background-color: #F8F8F8;
+}
+
+.content{
+    height:100%;
+    background-color: #ffffff;
+    max-width: 1000px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+}
+
+.connections-header{
+    padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

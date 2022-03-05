@@ -1,10 +1,14 @@
 import './App.css';
 
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Login } from '../Login';
+import { Login } from '../pages/Login';
 import { Profile } from '../Profile/Profile';
 import { Auth } from '../types';
+import { Dashboard } from '../pages/Dashboard/Dashboard';
+import { Invite } from '../pages/Invite/Invite';
+import { Signup } from '../pages/Signup/Signup';
 import logo from './2c_logo.svg';
 
 const LS_KEY = 'login:auth';
@@ -36,18 +40,17 @@ export const App = (): JSX.Element => {
 	const { auth } = state;
 
 	return (
-		<div className="App">
-			<header className="">
-				<img src={logo} className="App-logo" alt="logo" />
-				<div className="Twocorners">Twocorners</div>
-			</header>
-			<div className="App-intro">
+		<BrowserRouter>
+			<Routes>
+				<Route path="/signup" element={<Signup title={"Sign Up"} />} />
+				<Route path="/invite" element={<Invite title={"Invite"} />} />
 				{auth ? (
-					<Profile auth={auth} onLoggedOut={handleLoggedOut} />
+					<Route path="/" element={<Profile auth={auth} onLoggedOut={handleLoggedOut} />} />
 				) : (
-					<Login onLoggedIn={handleLoggedIn} />
+					<Route path="/login" element={<Login onLoggedIn={handleLoggedIn} />}/>
 				)}
-			</div>
-		</div>
+				<Route path="/journal" element={<Dashboard />}/>
+			</Routes>
+		</BrowserRouter>
 	);
 };

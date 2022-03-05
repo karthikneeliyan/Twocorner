@@ -1,7 +1,10 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
+.App > header{
+  text-align: center;
+}
 .App {
   /* width: 1024px; */
   padding: 100px 330px 396px 329px;

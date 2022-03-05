@@ -1,8 +1,10 @@
 import './Login.css';
-import { Auth } from '../types';
+import { Auth } from '../../types';
 import React, { useState } from 'react';
 import Web3 from 'web3';
 import metamask from './metamask-fox.svg';
+import logo from './../../App/2c_logo.svg';
+
 declare var window: any;
 
 interface Props {
@@ -114,7 +116,11 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 	};
 
 	return (
-		<div className="login">
+		<div className="Login App">
+			<header>
+				<img src={logo} className="App-logo" alt="logo" />
+				<div className="Twocorners">Twocorners</div>
+			</header>
 			<p className='login__heading'>
 			    Private Spaces, Unique Conversations
 			</p>
@@ -125,7 +131,7 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
 			<button className="login__button" onClick={handleClick}>
 				<div className="login__metamask">
 					<img src={metamask}  alt="Metamask" />
-					{loading ? 'Loading...' : 'Login with MetaMask'}
+					{loading ? 'Loading...' : 'METAMASK'}
 				</div>
 			</button>
 			</div>

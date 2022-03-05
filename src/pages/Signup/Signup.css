@@ -1,0 +1,19 @@
+.login {
+    min-height: 100vh;
+    background-color: #385CEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-content{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #fff;
+    min-width: 600px;
+    min-height: 600px;
+    border-radius: 1rem;
+    padding: 3rem
+   
+}
+

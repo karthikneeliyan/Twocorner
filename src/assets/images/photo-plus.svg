@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="216px" height="216px" viewBox="0 0 216 216" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>FD284DB4-1373-4D41-AE4C-C6395961BD00</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="99.7255068%" id="linearGradient-1">
+            <stop stop-color="#0A5AE3" offset="0%"></stop>
+            <stop stop-color="#0A5AE3" offset="100%"></stop>
+        </linearGradient>
+        <path d="M14.0251871,9.19362174 L14.0251871,13.3900195 C14.0251871,15.5676144 12.3429801,17.3383586 10.274265,17.3383586 L3.75092214,17.3383586 C1.68220704,17.3383586 0,15.5676144 0,13.3900195 L0,6.52334285 C0,4.34574801 1.68220704,2.57500376 3.75092214,2.57500376 L7.73750004,2.57500376 C8.00821877,2.57500376 8.22675075,2.80589576 8.22675075,3.09000451 C8.22675075,3.37411326 8.00740335,3.60500526 7.73750004,3.60500526 L3.75092214,3.60500526 C2.22201366,3.60500526 0.978501427,4.9139655 0.978501427,6.52334285 L0.978501427,13.3900195 C0.978501427,14.9993969 2.22201366,16.3083571 3.75092214,16.3083571 L10.274265,16.3083571 C11.8031735,16.3083571 13.0466857,14.9993969 13.0466857,13.3900195 L13.0466857,9.19362174 C13.0466857,8.90865466 13.2660331,8.67862099 13.5359364,8.67862099 C13.8058397,8.67862099 14.0251871,8.909513 14.0251871,9.19362174 Z M15.98219,2.57500376 L14.0251871,2.57500376 L14.0251871,0.515000751 C14.0251871,0.230033669 13.8058397,0 13.5359364,0 C13.2660331,0 13.0466857,0.230892003 13.0466857,0.515000751 L13.0466857,2.57500376 L11.0896828,2.57500376 C10.8189641,2.57500376 10.6004321,2.80589576 10.6004321,3.09000451 C10.6004321,3.37411326 10.8197795,3.60500526 11.0896828,3.60500526 L13.0466857,3.60500526 L13.0466857,5.66500826 C13.0466857,5.94997535 13.2660331,6.18000902 13.5359364,6.18000902 C13.8058397,6.18000902 14.0251871,5.94911701 14.0251871,5.66500826 L14.0251871,3.60500526 L15.98219,3.60500526 C16.2529087,3.60500526 16.4714407,3.37411326 16.4714407,3.09000451 C16.4714407,2.80589576 16.2529087,2.57500376 15.98219,2.57500376 Z" id="path-2"></path>
+        <filter x="-962.3%" y="-919.9%" width="1936.7%" height="1839.9%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="2.67600002" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="1" dy="0" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="54" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.168651661 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.650255766">
+        <g id="4" transform="translate(-521.000000, -863.000000)" fill-rule="nonzero">
+            <g id="Menu" transform="translate(445.000000, 947.000000)">
+                <g id="Group-3" transform="translate(164.000000, 6.000000)">
+                    <g id="Shape" transform="translate(19.000000, 18.000000)">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use stroke="url(#linearGradient-1)" stroke-width="0.647999966" fill="#0A5AE3" xlink:href="#path-2"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

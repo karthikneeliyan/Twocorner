@@ -1,0 +1,11 @@
+.form{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    color:inherit;
+    margin-top: 2rem;
+}
+
+.form > :last-child{
+    margin-top: auto;   
+}
