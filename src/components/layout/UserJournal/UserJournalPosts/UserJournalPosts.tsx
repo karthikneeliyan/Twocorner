@@ -5,13 +5,19 @@ import messageIcon from "../../../../assets/images/message.svg";
 import postImage from "../../../../assets/images/big-image.jpg";
 import photoSaveIcon from "../../../../assets/images/photo-save.svg";
 import "./UserJournalPosts.css";
-
+import styled from "styled-components"
 interface PostUser {
   user: string;
   postDate: string;
   tags?: string[];
 }
+const Button=styled("button")<any>`
+display:${props=>props.open?'none':'inline-block'};
+padding:10px;
+border-radius: 25px;
+margin:15px;
 
+`
 export const UserJournalPosts = () => {
   return (
     <>
@@ -21,22 +27,25 @@ export const UserJournalPosts = () => {
           <UserPostPost />
         </ul>
       </div>
-      <UserPostCapture />
+     
     </>
   );
 };
-const UserPostCapture = () => {
+export const UserPostCapture = (props:any) => {
+
   return (
     <div className="user-posts-capture">
       <div className="capture-img-container">
         <img src={photoSaveIcon} alt="" />
       </div>
+    
       <div className="capture-img-container">
         <img src={imageOptionsIcon} alt="" />
       </div>
       <div className="capture-img-container">
         <img src={messageIcon} alt="" />
       </div>
+      <Button onClick={props.handleClick}>{props.open?"Stop":"Start"} Meeting</Button>
     </div>
   );
 };

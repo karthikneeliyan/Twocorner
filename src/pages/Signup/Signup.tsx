@@ -5,16 +5,20 @@ import { PhoneInput } from "../../components/Inputs/PhoneInput/PhoneInput";
 import { Checkbox } from "../../components/Inputs/Checkbox/Checkbox";
 import { Form } from "../../components/Form/Form";
 import "./Signup.css";
-
+import { useNavigate } from "react-router-dom";
 interface Signup {
   title: string;
 }
 
 export const Signup: React.FC<Signup> = (props) => {
   const [state, setState] = useState<any>({});
+  const navigate = useNavigate();
   const onChangeHendler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
+  const handleSignUp=()=>{
+    navigate("/invite")
+  }
   return (
     <div className={"login"}>
       <div className={"login-content"}>
@@ -24,7 +28,7 @@ export const Signup: React.FC<Signup> = (props) => {
           <TextInput name={"dob"} label={"Dob"} type={"text"} onChange={onChangeHendler} value={state.dob && state.dob} />
           <PhoneInput name={"mobileNumber"} label={"Mobile Number"} onChange={onChangeHendler} />
           <Checkbox name={"terms"} type={"checkbox"} onChange={onChangeHendler} value={state.terms && state.terms} />
-          <Button title="Sign Up" />
+          <Button onClick={handleSignUp}title="Sign Up" />
         </Form>
       </div>
     </div>

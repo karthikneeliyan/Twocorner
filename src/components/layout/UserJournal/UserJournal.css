@@ -1,5 +1,11 @@
-.user-journal{
+
+.user-meeting {
     position: relative;
     overflow: auto;
-}
-
+    min-height: 600px;
+  }
+  
+  .user-meeting iframe {
+    width: 100%;
+    height: 600px;
+  }

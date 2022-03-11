@@ -1,0 +1,106 @@
+// UI to backend -> login
+{
+  "publicAddress": "RTYUIO567890FGHJK"
+}
+
+// Backend to UI -> login
+{
+  "tonce": "1234",
+  "publicAddress": "RTYUIO567890FGHJK"
+}
+
+// UI to BAckend
+{
+    "signature": "RTYUIO09876546789",
+    "publicAddress": "RTYUIO567890FGHJK"
+}
+
+//BACK to UI
+{
+  "jwtToken":  "ERTYUIO34567890OIUYTRTYUI456789OIUYTR"
+}
+
+
+//user/me.json
+{
+  "userDetails": {
+    "name": "Selvaraj",
+    "image": "test.jpg"
+  },
+  "newUser": "true|false"
+}
+// If newUser is true -> route to Signup page
+// If newUser is false -> route to journal page
+
+//POST to Backend for signup
+{
+  "fullName":  "TEST",
+  "dob": "10-01-1988",
+  "mobileNumber": "8680043294",
+  "countryCode": "+91",
+  "termsConditions": "true|false"
+}
+// res
+{
+    "success": "true|false"
+}
+
+
+
+// Invite friend
+{
+  "friendName": "Selvaraj",
+  "mobileNumber": "8680043294",
+  "countryCode": "+91"
+}
+//response
+{
+    "success": "true|false"
+}
+
+
+JSON for the journal page
+get users/:id/groups
+
+// Left menu
+// get users/:id/groups
+{
+    "groups": [
+        {
+            "groupName": "Ivan",
+            "groupAvatar": "Ivan.jpg",
+            "users": {"_ids": [1,3,4]}
+        }
+    ]
+}
+
+
+// get users/:id/groups/:id/journals
+{
+    "groupId": "1",
+    "journals": [
+        {
+            "type": "image|notes|video",
+            "status": "started|in-progress|completed|failed",
+            "thumbnailUrl": "fetch_thumbnail_url",
+            "url": "image_url",
+            "timeStamp": "epoch-utcTimestamp",
+            "notes": "test",
+            "isEmbedded": "true|false"
+        }
+    ]  
+}
+
+// Create journal
+{
+    "groupId": "1",
+    "journal": {
+        "type": "image|notes|video",
+        "status": "started|in-progress|completed|failed",
+        "thumbnailUrl": "fetch_thumbnail_url",
+        "url": "image_url",
+        "timeStamp": "epoch-utcTimestamp",
+        "notes": "test",
+        "isEmbedded": "true|false"
+    }
+}

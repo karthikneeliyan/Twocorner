@@ -2,7 +2,7 @@ import React from "react";
 import menuDots from "../../../../assets/images/menu-dots.svg";
 import "./UserJournalHeader.css";
 
-export const UserJournalHeader = () => {
+export const UserJournalHeader = (props:any) => {
   return (
     <div className="user-journal-header">
       <div>
