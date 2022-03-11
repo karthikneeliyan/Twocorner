@@ -38,7 +38,7 @@ export const PhoneInput: React.FC<PhoneInput> = ({ name, label, onChange }) => {
 
   console.log(selectedCountry);
   return (
-    <div className={"form-input"}>
+    <div key={"country"} className={"form-input"}>
       <label className={"form-label"} htmlFor={name}>
         {label}
       </label>
@@ -50,7 +50,7 @@ export const PhoneInput: React.FC<PhoneInput> = ({ name, label, onChange }) => {
           ))}
         </select>
         <Divider />
-        <input className={"phone-number"} onChange={onMobileNumberChange} id={name} type="tel" value={mobileNumber} />
+        <input  key={"mobile"}  className={"phone-number"} onChange={onMobileNumberChange} id={name} type="tel" value={mobileNumber} />
       </div>
     </div>
   );

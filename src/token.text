@@ -1,0 +1,8 @@
+curl --location --request POST 'http://441c-27-7-171-203.ngrok.io/api/v1/login/' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: connect.sid=s%3ACaSyMla_idfE0DP1C8EUyZguzEka3r4n.7AGvFY4Bg%2BCeDj6qlJ3br9K48wtA2qPSX8LdeS8oA8Q' \
+--data-raw '{
+    "address": "0xD1E536E77F8c8b317dd780ba73c9F15B383ba59D",
+    "msg":"",
+    "signed": ""
+}'

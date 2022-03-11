@@ -64,6 +64,16 @@ export const UserJournal = () => {
       setJournal(journal);
     };
     getJournalData()
+    const requestOptions = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' ,
+      mode:'cors',
+      "authorization":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwcm9maWxlIjp7ImVtYWlsIjoic2VsdmEzQHRod29ya3Mub3JnIiwicGhvbmUiOiI5Nzg4MzQzMjk2In0sInVzZXJOYW1lIjoidGVzdDMiLCJfaWQiOiI2MjIzMzE1NGY5M2UxODMzMWIxZjY3MTQiLCJmaXJzdE5hbWUiOiJzZWx2YSIsImxhc3ROYW1lIjoiUmFqIiwiaWF0IjoxNjQ2OTgxNDQ4LCJleHAiOjE2NDY5ODIzNDh9._zhUlYjB5AW57SezXkEJ1ZzySRRcOY-uxVjjUX3IOsY"
+    },
+  };
+  fetch('http://441c-27-7-171-203.ngrok.io/api/v1/users/', requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data));
    
   }, []);
   return (

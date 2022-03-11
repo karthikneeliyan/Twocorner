@@ -3,6 +3,13 @@ import user2 from "./assets/images/user-2.png";
 import user3 from "./assets/images/user-3.png";
 import user4 from "./assets/images/user-4.png";
 
+
+export const LOGIN_URL="http://441c-27-7-171-203.ngrok.io/api/v1/login/"
+export const SIGN_UP_URL="http://441c-27-7-171-203.ngrok.io/api/v1/signup"
+export const GROUP_URL="http://441c-27-7-171-203.ngrok.io/api/v1/users"
+
+// export const SIGN_UP_URL="http://441c-27-7-171-203.ngrok.io/api/v1/signup"
+
  const userDetails={
     "userDetails": {
       "name": "Selvaraj",

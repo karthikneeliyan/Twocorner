@@ -4,18 +4,21 @@ import React, { useState } from "react";
 import Web3 from "web3";
 import metamask from "./metamask-fox.svg";
 import logo from "./../../App/2c_logo.svg";
-import { JWT, getUser, getGroup } from "../../static-data";
+import { JWT, getUser, getGroup, GROUP_URL } from "../../static-data";
 import { useNavigate } from "react-router-dom";
 declare var window: any;
 
 interface Props {
   onLoggedIn: (auth: Auth) => void;
+  auth:any;
 }
 
 let web3: Web3 | undefined = undefined; // Will hold the web3 instance
 
-export const Login = ({ onLoggedIn }: Props): JSX.Element => {
+export const Login = ({ onLoggedIn,auth }: Props): JSX.Element => {
   const [loading, setLoading] = useState(false); // Loading button state
+  const [users, setUsers] = useState([]); // Loading button state
+
   const navigate = useNavigate();
   const handleAuthenticate = ({
     publicAddress,
@@ -111,19 +114,36 @@ export const Login = ({ onLoggedIn }: Props): JSX.Element => {
   };
 
   const handleStaticLogin = async () => {
-    onLoggedIn({ accessToken: JWT });
-    const user: any = await getUser();
-    if (user.newUser) {
-      navigate("/signup");
-   
-    }  else{
-      const group: any = await getGroup();
-      if (group?.groups?.length > 0) {
-          navigate("/invite");
-      }else{
+    // onLoggedIn({ accessToken: JWT });
+    try{
+      const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json',"authorization": auth.accessToken},
+       }
+      fetch(GROUP_URL,requestOptions).then(function(response) {                      // first then()
+        if(response.ok)
+        {
+          return response.json();         
+        }
+      
+        if(response.status!=200){
+  
+        }
+      }).then(({users})=>{
+      if(users.length){
         navigate("/journal");
+      }else{
+        navigate("/invite");
       }
+      }).catch(err=>{
+        console.log(err)
+      
+      })
+    }catch(e){
+      console.log(e)
     }
+   
+    
   };
 
   return (

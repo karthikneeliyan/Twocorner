@@ -36,18 +36,18 @@ export const Profile = ({ auth, onLoggedOut }: Props): JSX.Element => {
 
 	useEffect(() => {
 		const { accessToken } = auth;
-		const {
-			payload: { id },
-		} = jwtDecode<JwtDecoded>(accessToken);
+		// const {
+		// 	payload: { id },
+		// } = jwtDecode<JwtDecoded>(accessToken);
 
-		fetch(`${process.env.NODE_API_URL}/users/${id}`, {
-			headers: {
-				Authorization: `Bearer ${accessToken}`,
-			},
-		})
-			.then((response) => response.json())
-			.then((user) => setState({ ...state, user }))
-			.catch(window.alert);
+		// fetch(`${process.env.NODE_API_URL}/users/${id}`, {
+		// 	headers: {
+		// 		Authorization: `Bearer ${accessToken}`,
+		// 	},
+		// })
+		// 	.then((response) => response.json())
+		// 	.then((user) => setState({ ...state, user }))
+		// 	.catch(window.alert);
 	}, []);
 
 	const handleChange = ({
